@@ -9,7 +9,7 @@ contract CarbonCreditNFT is ERC721URIStorage, Ownable(msg.sender) {
     uint256 private _tokenId;
     uint256 public nftRate = 1 ether;
 
-    // Events
+
     event CreditMinted(address indexed to, uint256 indexed tokenId, string certificateURI);
     event CreditTransferred(address indexed from, address indexed to, uint256 tokenId, uint256 amount);
     event CreditRetired(address indexed owner, uint256 indexed tokenId);
@@ -116,7 +116,9 @@ contract CarbonCreditNFT is ERC721URIStorage, Ownable(msg.sender) {
         // To done in future   
     }
 
-
+    function getRate() public view returns (uint256) {
+        return nftRate;
+    }
     function setRate(uint256 rate) public onlyOwner {
         nftRate = rate;
     }
