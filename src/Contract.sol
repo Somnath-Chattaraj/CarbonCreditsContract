@@ -113,7 +113,7 @@ contract CarbonCreditNFT is ERC721URIStorage, Ownable(msg.sender) {
     }
 
     function voteUpgrade(string memory proposal, bool approve) public onlyOwner {
-        
+        // To done in future   
     }
 
 
